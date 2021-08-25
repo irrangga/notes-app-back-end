@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e070bb0f-4c66-4a60-a118-ccd77798c6cb",
+		"_postman_id": "4f4b3dc1-46d9-4fc0-9df1-0225228cf8c3",
 		"name": "Notes API Test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -30,7 +30,7 @@
 							"    pm.expect(responseJson).to.ownProperty('status');\r",
 							"    pm.expect(responseJson.status).to.equals('success');\r",
 							"    pm.expect(responseJson).to.ownProperty('message');\r",
-							"    pm.expect(responseJson.message).to.equals('Catatan berhasil ditambahkan');\r",
+							"    pm.expect(responseJson.message).to.equals('Note is successfully added.');\r",
 							"    pm.expect(responseJson).to.ownProperty('data');\r",
 							"    pm.expect(responseJson.data).to.be.an('object');\r",
 							"});\r",
@@ -234,7 +234,7 @@
 							"   pm.expect(responseJson).to.have.ownProperty('status');\r",
 							"   pm.expect(responseJson.status).to.equals('success');\r",
 							"   pm.expect(responseJson).to.have.ownProperty('message');\r",
-							"   pm.expect(responseJson.message).to.equals('Catatan berhasil diperbarui');\r",
+							"   pm.expect(responseJson.message).to.equals('Note is successfully updated.');\r",
 							"});\r",
 							"\r",
 							"pm.test('when request the updated note', () => {\r",
@@ -313,7 +313,7 @@
 							"   pm.expect(responseJson).to.have.ownProperty('status');\r",
 							"   pm.expect(responseJson.status).to.equals('success');\r",
 							"   pm.expect(responseJson).to.have.ownProperty('message');\r",
-							"   pm.expect(responseJson.message).to.equals('Catatan berhasil dihapus');\r",
+							"   pm.expect(responseJson.message).to.equals('Note is successfully deleted.');\r",
 							"}); \r",
 							"\r",
 							"pm.test('when request the updated note', () => {\r",
@@ -324,7 +324,7 @@
 							"                pm.expect(response.code).to.equals(404);\r",
 							"                const responseJson = response.json();\r",
 							"                pm.expect(responseJson.status).to.equals('fail');\r",
-							"                pm.expect(responseJson.message).to.equals('Catatan tidak ditemukan');\r",
+							"                pm.expect(responseJson.message).to.equals('Note cannot be found.');\r",
 							"            });\r",
 							"        }\r",
 							"    });\r",
